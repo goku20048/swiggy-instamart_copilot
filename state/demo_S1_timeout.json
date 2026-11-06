@@ -1,0 +1,25 @@
+{
+ "run_id": "demo_S1_timeout",
+ "scenario_id": "S1",
+ "messages": [
+  {
+   "role": "system",
+   "content": "AGENT: you decide refund requests by calling tools. Verify the order, check the policy, compute the refund, then issue it or escalate it. Finish with STATUS: explanation."
+  },
+  {
+   "role": "user",
+   "content": "My order ORD-100048 reached me very late. I would like a refund."
+  }
+ ],
+ "tokens_used": 0,
+ "llm_calls": 0,
+ "step_number": 0,
+ "tools_executed": [],
+ "steps": [],
+ "max_iterations": 6,
+ "token_limit": 6000,
+ "time_limit_seconds": 0,
+ "elapsed_seconds": 0.0,
+ "status": "FALLBACK_TIMEOUT",
+ "final_answer": "Handing over to a human agent: the 0-second time limit was reached. Request: My order ORD-100048 reached me very late. I would like a refund. Tools completed: none."
+}

@@ -1,0 +1,355 @@
+{
+  "segments": {
+    "rfm": {
+      "customers": 1175,
+      "recency_median": 19.0,
+      "recency_min": 0,
+      "recency_max": 180,
+      "frequency_mean": 9.46,
+      "frequency_max": 33,
+      "monetary_mean": 2552.06,
+      "monetary_max": 14766.55
+    },
+    "kmeans": [
+      {
+        "k": 2,
+        "inertia": 1820.8,
+        "silhouette": 0.465
+      },
+      {
+        "k": 3,
+        "inertia": 1268.2,
+        "silhouette": 0.445
+      },
+      {
+        "k": 4,
+        "inertia": 743.1,
+        "silhouette": 0.526
+      },
+      {
+        "k": 5,
+        "inertia": 617.4,
+        "silhouette": 0.48
+      },
+      {
+        "k": 6,
+        "inertia": 503.2,
+        "silhouette": 0.482
+      },
+      {
+        "k": 7,
+        "inertia": 408.5,
+        "silhouette": 0.416
+      },
+      {
+        "k": 8,
+        "inertia": 366.5,
+        "silhouette": 0.412
+      }
+    ],
+    "chosen_k": 4,
+    "profile": [
+      {
+        "segment_id": 0,
+        "recency": 28.86,
+        "frequency": 3.77,
+        "monetary": 1057.62,
+        "size": 436,
+        "segment_name": "Active Occasionals",
+        "share_pct": 37.1,
+        "revenue_share_pct": 15.4,
+        "action": "Send category-led reminders and a second-order nudge to move them towards a weekly habit."
+      },
+      {
+        "segment_id": 1,
+        "recency": 24.12,
+        "frequency": 6.77,
+        "monetary": 7129.7,
+        "size": 138,
+        "segment_name": "Premium Spenders",
+        "share_pct": 11.7,
+        "revenue_share_pct": 32.8,
+        "action": "Assign priority support and early access to electronics launches; protect them with a personal win-back offer the moment they go quiet."
+      },
+      {
+        "segment_id": 2,
+        "recency": 8.77,
+        "frequency": 19.4,
+        "monetary": 3410.02,
+        "size": 419,
+        "segment_name": "Loyal Regulars",
+        "share_pct": 35.7,
+        "revenue_share_pct": 47.6,
+        "action": "Offer a subscription or basket-builder bundle on staples to raise order value without discounting every order."
+      },
+      {
+        "segment_id": 3,
+        "recency": 109.04,
+        "frequency": 2.2,
+        "monetary": 685.99,
+        "size": 182,
+        "segment_name": "Dormant Occasionals",
+        "share_pct": 15.5,
+        "revenue_share_pct": 4.2,
+        "action": "Run a low-cost, time-limited reactivation coupon and stop contact if there is no response."
+      }
+    ],
+    "premium_segment_id": 1,
+    "pca_explained_variance_ratio": [
+      0.634,
+      0.218
+    ],
+    "pca_total": 0.852,
+    "pca_loadings_pc1": {
+      "recency": -0.582,
+      "frequency": 0.613,
+      "monetary": 0.534
+    },
+    "pca_loadings_pc2": {
+      "recency": 0.541,
+      "frequency": -0.197,
+      "monetary": 0.817
+    }
+  },
+  "lapse": {
+    "cohort": {
+      "customers": 1156,
+      "lapsed": 443,
+      "lapsed_pct": 38.32,
+      "train_rows": 924,
+      "test_rows": 232,
+      "train_lapsed": 354,
+      "test_lapsed": 89,
+      "latest_feature_order": "2025-08-31 22:35:45"
+    },
+    "baseline_always_not_lapsed": {
+      "accuracy": 0.616,
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "preprocessing": {
+      "frequency_mean_learned_by_scaler_on_train": 8.1147,
+      "frequency_mean_full_cohort": 8.0285,
+      "missing_feature_values": 0,
+      "encoded_feature_count": 19
+    },
+    "logistic_regression": {
+      "best_params": {
+        "model__C": 100
+      },
+      "best_cv_f1": 0.651,
+      "fits": 25,
+      "test": {
+        "confusion_matrix_tn_fp_fn_tp": [
+          111,
+          32,
+          31,
+          58
+        ],
+        "precision": 0.644,
+        "recall": 0.652,
+        "f1": 0.648,
+        "accuracy": 0.728,
+        "roc_auc": 0.801,
+        "pr_auc": 0.679
+      }
+    },
+    "random_forest": {
+      "best_params": {
+        "model__max_depth": 8,
+        "model__min_samples_leaf": 10
+      },
+      "best_cv_f1": 0.687,
+      "fits": 45,
+      "test": {
+        "confusion_matrix_tn_fp_fn_tp": [
+          111,
+          32,
+          32,
+          57
+        ],
+        "precision": 0.64,
+        "recall": 0.64,
+        "f1": 0.64,
+        "accuracy": 0.724,
+        "roc_auc": 0.782,
+        "pr_auc": 0.615
+      }
+    },
+    "selected_model": "random_forest",
+    "class_balance": {
+      "balanced_class_counts": {
+        "1": 570,
+        "0": 570
+      },
+      "unbalanced": {
+        "confusion_matrix_tn_fp_fn_tp": [
+          111,
+          32,
+          31,
+          58
+        ],
+        "precision": 0.644,
+        "recall": 0.652,
+        "f1": 0.648,
+        "accuracy": 0.728,
+        "roc_auc": 0.801,
+        "pr_auc": 0.679
+      },
+      "balanced": {
+        "confusion_matrix_tn_fp_fn_tp": [
+          90,
+          53,
+          13,
+          76
+        ],
+        "precision": 0.589,
+        "recall": 0.854,
+        "f1": 0.697,
+        "accuracy": 0.716,
+        "roc_auc": 0.787,
+        "pr_auc": 0.647
+      }
+    },
+    "top_rf_features": {
+      "monetary": 0.278,
+      "frequency": 0.277,
+      "recency": 0.111,
+      "avg_delivery_minutes": 0.062,
+      "avg_discount_pct": 0.053
+    },
+    "logistic_coefficients": {
+      "frequency": -1.698,
+      "favourite_category_Electronics": -1.137,
+      "favourite_category_Grocery": -0.449,
+      "city_Delhi": -0.375,
+      "monetary": 0.285,
+      "favourite_category_Personal Care": -0.284,
+      "favourite_category_Snacks": -0.279,
+      "city_Mumbai": -0.23,
+      "gender_male": -0.208,
+      "city_Chennai": -0.17,
+      "gender_unknown": -0.16,
+      "city_Hyderabad": -0.136,
+      "cancellation_rate": -0.124,
+      "avg_delivery_minutes": 0.079,
+      "tenure_days": -0.05,
+      "recency": 0.04,
+      "city_Pune": -0.032,
+      "age": 0.023,
+      "avg_discount_pct": 0.004
+    },
+    "reloaded_predictions_identical": true,
+    "retention_list": {
+      "premium_customers_in_test": 40,
+      "premium_test_truly_lapsed": 12,
+      "listed": 10,
+      "truly_lapsed": 1,
+      "rows": [
+        {
+          "customer_id": "C0862",
+          "lapse_probability": 0.5304,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C0060",
+          "lapse_probability": 0.4765,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C1008",
+          "lapse_probability": 0.4756,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C0267",
+          "lapse_probability": 0.4753,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C0133",
+          "lapse_probability": 0.4712,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C0942",
+          "lapse_probability": 0.4688,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C1000",
+          "lapse_probability": 0.4654,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C0553",
+          "lapse_probability": 0.4645,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C1112",
+          "lapse_probability": 0.462,
+          "actually_lapsed": 0
+        },
+        {
+          "customer_id": "C0565",
+          "lapse_probability": 0.4603,
+          "actually_lapsed": 1
+        }
+      ]
+    },
+    "error_analysis": {
+      "false_negative_mean_recency": 18.5,
+      "false_negative_mean_frequency": 6.7,
+      "true_positive_mean_recency": 49.8,
+      "true_positive_mean_frequency": 2.3
+    },
+    "segment_lapse": [
+      {
+        "segment_name": "Active Occasionals",
+        "cohort_customers": 417,
+        "lapse_rate_pct": 47.2,
+        "lapsed_customers": 197,
+        "top_favourite_category": "Dairy",
+        "top_favourite_category_pct": 29.0,
+        "mean_cancellation_rate_pct": 8.7,
+        "test_customers": 84,
+        "mean_predicted_risk_test": 0.567
+      },
+      {
+        "segment_name": "Dormant Occasionals",
+        "cohort_customers": 182,
+        "lapse_rate_pct": 100.0,
+        "lapsed_customers": 182,
+        "top_favourite_category": "Dairy",
+        "top_favourite_category_pct": 28.6,
+        "mean_cancellation_rate_pct": 10.9,
+        "test_customers": 31,
+        "mean_predicted_risk_test": 0.63
+      },
+      {
+        "segment_name": "Loyal Regulars",
+        "cohort_customers": 419,
+        "lapse_rate_pct": 4.8,
+        "lapsed_customers": 20,
+        "top_favourite_category": "Dairy",
+        "top_favourite_category_pct": 38.4,
+        "mean_cancellation_rate_pct": 9.4,
+        "test_customers": 77,
+        "mean_predicted_risk_test": 0.091
+      },
+      {
+        "segment_name": "Premium Spenders",
+        "cohort_customers": 138,
+        "lapse_rate_pct": 31.9,
+        "lapsed_customers": 44,
+        "top_favourite_category": "Electronics",
+        "top_favourite_category_pct": 97.1,
+        "mean_cancellation_rate_pct": 8.1,
+        "test_customers": 40,
+        "mean_predicted_risk_test": 0.411
+      }
+    ]
+  }
+}

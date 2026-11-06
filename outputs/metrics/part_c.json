@@ -1,0 +1,158 @@
+{
+  "guardrails": {
+    "skipped_empty": 4,
+    "flagged_long": 4,
+    "long_ticket_token_estimates": [
+      734
+    ],
+    "eligible": 156
+  },
+  "redaction": {
+    "email": 55,
+    "phone": 91,
+    "order_id": 132,
+    "total": 278,
+    "remaining_after_redaction": 0
+  },
+  "prompt_tokens": {
+    "zero_shot": 25,
+    "few_shot": 106
+  },
+  "zero_shot": {
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "tickets_classified": 147,
+    "correct": 126,
+    "accuracy_pct": 85.7,
+    "total_tokens": 8308,
+    "tokens_per_classified": 56.52,
+    "transient_errors": 19,
+    "recovered_errors": 19,
+    "route_counts": {
+      "support_queue": 112,
+      "security_team": 23,
+      "human_review": 17,
+      "premium_desk": 12
+    }
+  },
+  "few_shot": {
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "tickets_classified": 147,
+    "correct": 147,
+    "accuracy_pct": 100.0,
+    "total_tokens": 20944,
+    "tokens_per_classified": 142.48,
+    "transient_errors": 19,
+    "recovered_errors": 19,
+    "route_counts": {
+      "support_queue": 102,
+      "security_team": 34,
+      "human_review": 17,
+      "premium_desk": 11
+    }
+  },
+  "zero_shot_confusion_true_by_predicted": {
+    "billing": {
+      "billing": 38,
+      "delivery": 0,
+      "technical": 0,
+      "fraud": 0
+    },
+    "delivery": {
+      "billing": 0,
+      "delivery": 36,
+      "technical": 0,
+      "fraud": 0
+    },
+    "technical": {
+      "billing": 10,
+      "delivery": 0,
+      "technical": 29,
+      "fraud": 0
+    },
+    "fraud": {
+      "billing": 11,
+      "delivery": 0,
+      "technical": 0,
+      "fraud": 23
+    }
+  },
+  "few_shot_confusion_true_by_predicted": {
+    "billing": {
+      "billing": 38,
+      "delivery": 0,
+      "technical": 0,
+      "fraud": 0
+    },
+    "delivery": {
+      "billing": 0,
+      "delivery": 36,
+      "technical": 0,
+      "fraud": 0
+    },
+    "technical": {
+      "billing": 0,
+      "delivery": 0,
+      "technical": 39,
+      "fraud": 0
+    },
+    "fraud": {
+      "billing": 0,
+      "delivery": 0,
+      "technical": 0,
+      "fraud": 34
+    }
+  },
+  "budget_demo": {
+    "token_budget": 6000,
+    "budget_exhausted": 43,
+    "tokens_spent": 6012,
+    "status_counts": {
+      "classified_json": 99,
+      "budget_exhausted": 43,
+      "classified_keyword": 8,
+      "flagged_invalid_output": 6,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    }
+  },
+  "final": {
+    "status_counts": {
+      "classified_json": 135,
+      "classified_keyword": 12,
+      "flagged_invalid_output": 9,
+      "skipped_empty": 4,
+      "flagged_long": 4
+    },
+    "tickets_classified": 147,
+    "correct": 147,
+    "accuracy_pct": 100.0,
+    "total_tokens": 20944,
+    "tokens_per_classified": 142.48,
+    "transient_errors": 19,
+    "recovered_errors": 19,
+    "route_counts": {
+      "support_queue": 102,
+      "security_team": 34,
+      "human_review": 17,
+      "premium_desk": 11
+    }
+  },
+  "retry_waits": {
+    "count": 19,
+    "min": 0.0453,
+    "max": 0.0562,
+    "all_retry_number_zero": true
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "audit": {
+    "profiles": {
+      "customers": {
+        "shape": [
+          1200,
+          5
+        ],
+        "columns": {
+          "customer_id": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "city": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "signup_date": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "age": {
+            "dtype": "float64",
+            "missing": 61,
+            "missing_pct": 5.08
+          },
+          "gender": {
+            "dtype": "str",
+            "missing": 30,
+            "missing_pct": 2.5
+          }
+        }
+      },
+      "products": {
+        "shape": [
+          40,
+          4
+        ],
+        "columns": {
+          "product_id": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "product_name": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "category": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "price_inr": {
+            "dtype": "int64",
+            "missing": 0,
+            "missing_pct": 0.0
+          }
+        }
+      },
+      "orders": {
+        "shape": [
+          13084,
+          9
+        ],
+        "columns": {
+          "order_id": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "customer_id": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "product_id": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "quantity": {
+            "dtype": "int64",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "order_ts": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "status": {
+            "dtype": "str",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "discount_pct": {
+            "dtype": "int64",
+            "missing": 0,
+            "missing_pct": 0.0
+          },
+          "order_amount": {
+            "dtype": "str",
+            "missing": 53,
+            "missing_pct": 0.41
+          },
+          "delivery_minutes": {
+            "dtype": "float64",
+            "missing": 2541,
+            "missing_pct": 19.42
+          }
+        }
+      }
+    },
+    "figures": {
+      "orders_rows": 13084,
+      "orders_exact_duplicates": 119,
+      "orders_pending": 656,
+      "orders_distinct_order_id": 12309,
+      "orders_non_numeric_amount": 120,
+      "orders_negative_delivery": 106,
+      "orders_blank_delivery": 2541,
+      "customers_blank_age": 61,
+      "customers_age_outside_10_100": 6,
+      "customers_raw_city_spellings": 24,
+      "customers_raw_gender_spellings": 10,
+      "customers_blank_gender": 30
+    }
+  },
+  "customer_rules": {
+    "city_values_changed": 476,
+    "gender_values_changed": 950,
+    "gender_blank_to_unknown": 30,
+    "ages_set_missing_out_of_range": 6,
+    "ages_filled_with_city_median": 67
+  },
+  "order_rules": {
+    "rows_in": 13084,
+    "timestamps_parsed": 13084,
+    "exact_duplicates_removed": 119,
+    "superseded_records_removed": 656,
+    "amounts_recomputed_from_price": 112,
+    "negative_delivery_set_missing": 105,
+    "completed_delivery_imputed": 774,
+    "cancelled_delivery_left_missing": 1199,
+    "rows_out": 12309
+  },
+  "after_cleaning": {
+    "city_counts": {
+      "Pune": 227,
+      "Delhi": 210,
+      "Bengaluru": 197,
+      "Chennai": 191,
+      "Hyderabad": 191,
+      "Mumbai": 184
+    },
+    "gender_counts": {
+      "female": 610,
+      "male": 560,
+      "unknown": 30
+    },
+    "age_min": 18.0,
+    "age_max": 60.0,
+    "age_missing": 0,
+    "non_integer_ages": 21,
+    "status_counts": {
+      "completed": 11110,
+      "cancelled": 1199
+    },
+    "completed_revenue_inr": 2998668.8,
+    "delivery_missing_by_status": {
+      "cancelled": 1199,
+      "completed": 0
+    }
+  }
+}
